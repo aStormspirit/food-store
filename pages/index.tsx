@@ -12,8 +12,18 @@ interface PL {
   short_desc: string
 }
 
-export default function Home({productsList}: any) {
-  console.log(productsList)
+// {productsList}: any
+
+export default function Home() {
+  let productsList = [
+    {
+      "id": 1,
+      "image": '',
+      "name": 'product-1',
+      "price": 200,
+      "short_desc": "numeer"
+    }
+  ]
   return (
     <div className={styles.container}>
       <Head>
@@ -27,12 +37,12 @@ export default function Home({productsList}: any) {
   )
 }
 
-export const getServerSideProps = async () => {
+// export const getServerSideProps = async () => {
 
-  const res = await axios.get(`http://${process.env.API_URL}/api/products`)
-  return {
-    props: {
-      productsList: res.data
-    }
-  }
-}
+//   const res = await axios.get(``)
+//   return {
+//     props: {
+//       productsList: res.data
+//     }
+//   }
+// }
