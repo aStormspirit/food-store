@@ -5,7 +5,7 @@ import ProductCard from './ProductCard'
 const ProductList = ({productsList}) => {
   return (
     <div className={styles.container}>
-        <h1 className={styles.title}>Лучшая пицца в городе</h1>
+        <h1 className={styles.title}>Лучшая мясо в России</h1>
         <p className={styles.desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus aliquet ante, non ullamcorper leo bibendum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae condimentum massa, id finibus odio. In molestie, velit nec posuere semper, est diam molestie turpis, in facilisis nisi augue at quam.</p>
         <div className={styles.wrapper}>
           {productsList.map((pizza: any) =>(
