@@ -9,7 +9,7 @@ import OrderDetail from '../components/OrderDetail'
 const Cart = () => {
   const [open, setOpen] = useState(false)
   const [cash, setCash] = useState(false)
-  const cart = useSelector((state) => state.cart)
+  const cart = useSelector((state: any) => state.cart)
 
   return (
     <div className={styles.container}>
