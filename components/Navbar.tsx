@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
           <li className={styles.listItem}>Продукты</li>
           <Link href={'/'} className={styles.link}>
-          <Image className={styles.link} src='/img/logo.png' alt='logo' width='160' height='69' />
+          <Image className={styles.link} src='/img/logo.jpeg' alt='logo' width='100' height='69' />
           </Link>
           <li className={styles.listItem}>Меню</li>
           <li className={styles.listItem}>О нас</li>

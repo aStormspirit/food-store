@@ -11,10 +11,10 @@ const Product = () => {
 
   let product =  {
       "id": 1,
-      "name": 'product 1',
-      "image": '/img/no-image.jpg',
-      "price": 200,
-      "short_description": "swfew"
+      "name": 'Куриные крылышки',
+      "image": '/img/product.jpeg',
+      "price": 225,
+      "short_description": "Куриные крылышки, в вакумной упаковке"
     }
 
     let newprice = Number(product.price)
@@ -36,7 +36,7 @@ const Product = () => {
       <div className={styles.container}>
           <div className={styles.left}>
             <div className={styles.imgContainer}>
-                <Image src='/img/no-image.jpg' layout='fill' alt='image' objectFit='contain' />
+                <Image src={product.image} layout='fill' alt='image' objectFit='contain' />
             </div>
           </div>
           <div className={styles.right}>
@@ -47,18 +47,18 @@ const Product = () => {
               <div className={styles.sizes}>
                 <div className={styles.size} onClick={() => handleSize(0)}>
                     <Image src='/img/size.png' layout='fill' alt='' />
-                    <span className={styles.number}>Маленькая</span>
+                    <span className={styles.number}>3кг</span>
                 </div>
                 <div className={styles.size} onClick={() => handleSize(1)}>
                     <Image src='/img/size.png' layout='fill' alt='' />
-                    <span className={styles.number}>Средняя</span>
+                    <span className={styles.number}>5кг</span>
                 </div>
                 <div className={styles.size} onClick={() => handleSize(2)}>
                     <Image src='/img/size.png' layout='fill' alt='' />
-                    <span className={styles.number}>Большая</span>
+                    <span className={styles.number}>7кг</span>
                 </div>
               </div>
-              <h3 className={styles.choose}>Выберите дополнительные игредиенты</h3>
+              <h3 className={styles.choose}>Выберите способ доставки</h3>
               <div className={styles.ingredients}>
                   <div className={styles.option}>
                     <input
@@ -67,7 +67,7 @@ const Product = () => {
                         name='double'
                         className={styles.checkbox}
                         />
-                    <label htmlFor='double'>двойная начинка</label>
+                    <label htmlFor='double'>Доставка курьером</label>
                   </div>
                   <div className={styles.option}>
                     <input
@@ -76,19 +76,11 @@ const Product = () => {
                         name='grile'
                         className={styles.checkbox}
                         />
-                    <label htmlFor='grile'>Острая</label>
-                  </div>
-                  <div className={styles.option}>
-                    <input
-                        type='checkbox'
-                        id='excheese'
-                        name='exchees'
-                        className={styles.checkbox}
-                        />
-                    <label htmlFor='excheese'>Много сыра</label>
+                    <label htmlFor='grile'>Самовывоз</label>
                   </div>
               </div>
               <div className={styles.add}>
+                <p>Колличество упаковок:</p>
                 <input onChange={(e: any)=>setQuantity(e.target.value)} type='number' defaultValue={1} className={styles.quantity} />
                 <button className={styles.button} onClick={() => handleClick()}>В корзину</button>
               </div>

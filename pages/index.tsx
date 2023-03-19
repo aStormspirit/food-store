@@ -18,10 +18,10 @@ export default function Home() {
   let productsList = [
     {
       "id": 1,
-      "image": '',
-      "name": 'product-1',
-      "price": 200,
-      "short_desc": "numeer"
+      "name": 'Куриные крылышки',
+      "image": '/img/product.jpeg',
+      "price": 225,
+      "short_description": "Куриные крылышки, в вакумной упаковке"
     }
   ]
   return (
