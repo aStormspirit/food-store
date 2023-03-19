@@ -85,13 +85,31 @@
       font-weight: bold;
       color: #d1411e;
   }
+
+  .item:last-child{
+    display: none;
+  }
+
   
-  @media screen and (max-width:480px) {
+
+  
+  @media screen and (max-width:560px) {
+    .list{
+      display: none !important;
+    }
     .item:nth-child(2) {
       display: none;
+    }
+
+    .item:last-child{
+      display: block;
     }
   
     .item:nth-child(1) {
       flex: 3;
+    }
+
+    .text{
+      display: none;
     }
   }

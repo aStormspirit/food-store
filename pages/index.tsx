@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pizza </title>
+        <title>Pizza</title>
         <meta name="description" content="Pizza shop" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

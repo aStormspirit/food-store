@@ -1,0 +1,101 @@
+  
+  @media screen and (max-width:560px) {
+
+    #check_menu{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    #check_menu:checked ~ .mobile_menu{
+      width: 70%;
+      min-height: 500px;
+    }
+
+    #check_menu:checked ~ .burger_span::before{
+        display: none;
+    }
+
+    .burger_span{
+        border-radius: 25%;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 24px;
+        height: 4px;
+        background-color: black;
+    }
+
+    .burger_span:before{
+        border-radius: 25%;
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        width: 24px;
+        height: 4px;
+        background-color: black;
+    }
+
+    .burger_span:after{
+        border-radius: 25%;
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        width: 24px;
+        height: 4px;
+        background-color: black;
+    }
+
+
+
+    #burger{
+      position: absolute;
+      top: 14px;
+      right: 6px;
+      width: 36px;
+      height: 4px;
+      border-right: 5px;
+      background-color: #d1411e;
+      border-radius: 25%;
+    }
+  
+    #burger:first-of-type{
+      top: 22px
+    }
+  
+    #burger:last-of-type{
+      top: 30px;
+    }
+  
+    .mobile_menu{
+      background-color: #5e5e5e;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      max-height: 0;
+      font-size: 0;
+      overflow: hidden;
+      transition:.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+    }
+
+    .burger_wrapper{
+      position: relative;
+      background-color: white;
+      border: black;
+      width: 48px;
+      height: 48px;
+      border-bottom: 50%;
+      border: 50%;
+      border-radius: 50%;
+    }
+  }

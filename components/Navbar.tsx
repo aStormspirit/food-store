@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react'
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import Burger from './menu/Burger';
 
 const Navbar = () => {
   const quantity = useSelector((state: any)=>state.cart.quantity)
@@ -21,15 +22,15 @@ const Navbar = () => {
       <div className={styles.item}>
         <ul className={styles.list}>
           <Link href={'/'} className={styles.link}>
-          <li className={styles.listItem}>Главная</li>
-          </Link>
           <li className={styles.listItem}>Продукты</li>
+          </Link>
+          <li className={styles.listItem}>Доставка</li>
           <Link href={'/'} className={styles.link}>
           <Image className={styles.link} src='/img/logo.jpeg' alt='logo' width='100' height='69' />
           </Link>
-          <li className={styles.listItem}>Меню</li>
-          <li className={styles.listItem}>О нас</li>
           <li className={styles.listItem}>Контакты</li>
+          <li className={styles.listItem}>О нас</li>
+          <li className={styles.listItem}>Пункт-1</li>
         </ul>
       </div>
       <div className={styles.item}>
@@ -39,6 +40,9 @@ const Navbar = () => {
           <div className={styles.counter}>{quantity}</div>
         </div>
         </Link>
+      </div>
+      <div className={styles.item}>
+        <Burger />
       </div>
     </div>
   )
