@@ -11,8 +11,8 @@
     }
 
     #check_menu:checked ~ .mobile_menu{
-      width: 70%;
-      min-height: 500px;
+      width: calc(100% - 100px);
+      min-height: 900px;
     }
 
     #check_menu:checked ~ .burger_span::before{
@@ -25,8 +25,8 @@
         top: 50%;
         left: 25%;
         width: 24px;
-        height: 4px;
-        background-color: black;
+        height: 3px;
+        background-color: white;
     }
 
     .burger_span:before{
@@ -36,8 +36,8 @@
         top: -10px;
         left: 0px;
         width: 24px;
-        height: 4px;
-        background-color: black;
+        height: 3px;
+        background-color: white;
     }
 
     .burger_span:after{
@@ -47,8 +47,8 @@
         top: 10px;
         left: 0px;
         width: 24px;
-        height: 4px;
-        background-color: black;
+        height: 3px;
+        background-color: white;
     }
 
 
@@ -86,16 +86,19 @@
       display: flex;
       flex-direction: column;
       font-size: 24px;
+      display: flex;
+      width: 0;
+    }
+
+    .mobile_menu > a{
+      margin-left: 5%;
+      margin-top: 10%;
     }
 
     .burger_wrapper{
       position: relative;
-      background-color: white;
       border: black;
       width: 48px;
       height: 48px;
-      border-bottom: 50%;
-      border: 50%;
-      border-radius: 50%;
     }
   }

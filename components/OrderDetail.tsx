@@ -52,7 +52,7 @@ const OrderDetail = ({cart, total, setCash}) => {
           <div className={styles.close}>
             <AiOutlineClose className={styles.svg} onClick={() => setCash(false)} />
           </div>
-            <h1 className={styles.title}>Вы оплатите {total}$ после доставки</h1>
+            <h1 className={styles.title}>Вы оплатите {total}&#8381; после доставки</h1>
             <div className={styles.item}>
                 <label className={styles.label} htmlFor="">Имя Фамилия</label>
                 <input placeholder="John Doe" type="text" onChange={(e) => setCustomer(e.target.value)} className={styles.input} />

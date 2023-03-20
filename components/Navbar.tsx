@@ -4,6 +4,8 @@ import React from 'react'
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Burger from './menu/Burger';
+import { BsWhatsapp, BsTelegram } from "react-icons/bs";
+import { FaVk } from "react-icons/fa";
 
 const Navbar = () => {
   const quantity = useSelector((state: any)=>state.cart.quantity)
@@ -32,6 +34,17 @@ const Navbar = () => {
           <li className={styles.listItem}>О нас</li>
           <li className={styles.listItem}>Пункт-1</li>
         </ul>
+      </div>
+      <div className={styles.item} id={styles.mobile_logo}>
+      <div>
+        <BsWhatsapp />
+        </div>
+        <div>
+        <BsTelegram />
+        </div>
+        <div>
+        <FaVk />
+        </div>
       </div>
       <div className={styles.item}>
       <Link href={'/cart'} className={styles.link}>

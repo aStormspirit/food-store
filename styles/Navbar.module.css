@@ -91,6 +91,10 @@
   }
 
   
+  #mobile_logo{
+    display: none;
+  }
+  
 
   
   @media screen and (max-width:560px) {
@@ -102,14 +106,35 @@
     }
 
     .item:last-child{
-      display: block;
+      display: flex;
     }
   
     .item:nth-child(1) {
-      flex: 3;
+      flex: 2;
     }
 
     .text{
       display: none;
     }
+
+
+    #mobile_logo{
+      display: flex;
+      flex: 1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #mobile_logo>div{
+        margin: 10px;
+        width: 40px;
+    }
+  
+    #mobile_logo>div>svg{
+        cursor: pointer;
+        transform: scale(2.5);
+    }
+
   }
