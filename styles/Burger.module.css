@@ -15,10 +15,6 @@
       min-height: 900px;
     }
 
-    #check_menu:checked ~ .burger_span::before{
-        display: none;
-    }
-
     .burger_span{
         border-radius: 25%;
         position: absolute;
@@ -29,7 +25,7 @@
         background-color: white;
     }
 
-    .burger_span:before{
+    .burger_span::before{
         border-radius: 25%;
         content: '';
         position: absolute;
@@ -40,7 +36,7 @@
         background-color: white;
     }
 
-    .burger_span:after{
+    .burger_span::after{
         border-radius: 25%;
         content: '';
         position: absolute;

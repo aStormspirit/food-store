@@ -1,20 +1,22 @@
 import styles from '../styles/Navbar.module.css';
 import Image from 'next/image';
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Burger from './menu/Burger';
 import { BsWhatsapp, BsTelegram } from "react-icons/bs";
 import { FaVk } from "react-icons/fa";
+import CallForm from './menu/CallForm';
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
   const quantity = useSelector((state: any)=>state.cart.quantity)
 
   return (
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.callButton}>
-          <Image src='/img/telephone.png' width='32' height='32' alt='telephone'></Image>
+          <Image src='/img/telephone.png' onClick={() => setOpen(!open)} width='32' height='32' alt='telephone'></Image>
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>Заказать</div>
@@ -54,6 +56,7 @@ const Navbar = () => {
         </div>
         </Link>
       </div>
+      {open && <CallForm setOpen={setOpen} />}
       <div className={styles.item}>
         <Burger />
       </div>
