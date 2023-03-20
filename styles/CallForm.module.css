@@ -35,6 +35,56 @@
   }
   
   .title {
-    font-weight: 300;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ff7a00;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input{
+    border-radius: 50px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #ff7a00;
+  }
+
+  .button{
+    font-size: 14px;
+    padding: 8px 20px;
+    background: #ff7a00;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: background .3s ease,color .3s ease,border-color .3s ease;
+    cursor: pointer;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+  }
+
+  .button:hover{
+    color: aquamarine;
+  }
+
+  .formText{
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .formLink{
+    border: 0;
+    color: #ff7a00;
+    transition: color .3s ease;
   }
   
