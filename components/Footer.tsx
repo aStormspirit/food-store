@@ -9,9 +9,9 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.item} style={{flexDirection: 'column'}}>
         <div className={styles.imgWrapper}>
-        <Image src='/img/logo.png' alt='logo' width='160' height='69' objectFit='contain'></Image>
+        <Image src='/img/logo.jpeg' alt='logo' width='80' height='69' objectFit='contain'></Image>
         </div>
-      <p className={styles.desc}>Магазин Пицца шоп 2022</p>
+      <p className={styles.desc}>Магазин HUBерма</p>
       <div className={styles.link}>
       <Link href={'/'}>Политика конфиденциальности</Link>
       </div>

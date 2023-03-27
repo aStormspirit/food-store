@@ -128,13 +128,13 @@
     }
   
     #mobile_logo>div{
-        margin: 10px;
+        margin: 0;
         width: 40px;
     }
   
     #mobile_logo>div>svg{
         cursor: pointer;
-        transform: scale(2.5);
+        transform: scale(1.5);
     }
 
   }

@@ -15,10 +15,12 @@ const Burger = () => {
     <span className={styles.burger_close}></span>
     </div>
     <nav className={styles.mobile_menu}>
-      <Link href={'#'}>Продукты</Link>
+      <Link href={'#'}>Главная</Link>
       <Link href={'#'}>Меню</Link>
-      <Link href={'#'}>О нас</Link>
-      <Link href={'#'}>Контакты</Link>  
+      <Link href={'#'}>Отзывы</Link>
+      <Link href={'#'}>Контакты</Link>
+      <Link href={'#'}>Доставка</Link>  
+      <Link href={'#'}>Личный кабинет</Link>  
     </nav> 
     </div>
   )

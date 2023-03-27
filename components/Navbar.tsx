@@ -26,15 +26,14 @@ const Navbar = () => {
       <div className={styles.item}>
         <ul className={styles.list}>
           <Link href={'/'} className={styles.link}>
-          <li className={styles.listItem}>Продукты</li>
+          <li className={styles.listItem}>Главная</li>
           </Link>
           <li className={styles.listItem}>Доставка</li>
           <Link href={'/'} className={styles.link}>
           <Image className={styles.link} src='/img/logo.jpeg' alt='logo' width='100' height='69' />
           </Link>
           <li className={styles.listItem}>Контакты</li>
-          <li className={styles.listItem}>О нас</li>
-          <li className={styles.listItem}>Пункт-1</li>
+          <li className={styles.listItem}>Отзывы</li>
         </ul>
       </div>
       <div className={styles.item} id={styles.mobile_logo}>
