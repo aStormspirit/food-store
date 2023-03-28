@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pizza</title>
-        <meta name="description" content="Pizza shop" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Huberma</title>
+        <meta name="description" content="Huberma shop" />
+        <link rel="icon" href="/img/logo.jpeg" />
       </Head>
       <Slider />
       <ProductList productsList={productsList} />
