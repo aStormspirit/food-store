@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BsWhatsapp, BsTelegram } from "react-icons/bs";
 import { FaVk } from "react-icons/fa";
+
+
 const Footer = () => {
   return (
     <div className={styles.container}>

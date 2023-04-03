@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Slider from '../components/Slider'
+import Banner from '../components/Banner'
 import ProductList from '../components/ProductList'
 import axios from 'axios'
 
@@ -15,6 +16,7 @@ interface PL {
 // {productsList}: any
 
 export default function Home() {
+
   let productsList = [
     {
       "id": 1,
@@ -24,6 +26,7 @@ export default function Home() {
       "short_description": "Куриные крылышки, в вакумной упаковке"
     }
   ]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,7 +34,7 @@ export default function Home() {
         <meta name="description" content="Huberma shop" />
         <link rel="icon" href="/img/logo.jpeg" />
       </Head>
-      <Slider />
+      <Banner />
       <ProductList productsList={productsList} />
     </div>
   )
