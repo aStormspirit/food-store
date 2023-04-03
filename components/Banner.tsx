@@ -22,7 +22,7 @@ const Banner = () => {
               src={'/img/mainimg.webp'}
               alt={'mainimg'} 
               loading={'lazy'} 
-              width={width < 560 ? 400 : 1200}
+              width={width < 560 ? 350 : 1200}
               height={width < 560 ? 200 : 400} 
               sizes="(max-width: 480px) 100vw,
               (max-width: 780px) 100vw,

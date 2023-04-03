@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Slider from '../components/Slider'
 import Banner from '../components/Banner'
 import ProductList from '../components/ProductList'
-import axios from 'axios'
 
 interface PL {
   id: number,
@@ -18,6 +16,13 @@ interface PL {
 export default function Home() {
 
   let productsList = [
+    {
+      "id": 1,
+      "name": 'Куриные крылышки',
+      "image": '/img/product.jpeg',
+      "price": 225,
+      "short_description": "Куриные крылышки, в вакумной упаковке"
+    },
     {
       "id": 1,
       "name": 'Куриные крылышки',

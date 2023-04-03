@@ -16,10 +16,10 @@ const Burger = () => {
     </div>
     <nav className={styles.mobile_menu}>
       <Link href={'/'}>Главная</Link>
+      <Link href={'/catalog'}>Каталог</Link>
       <Link href={''}>Контакты</Link>
       <Link href={'#'}>Отзывы</Link>
-      <Link href={'#'}>Доставка</Link>  
-      <Link href={'#'}>Личный кабинет</Link>  
+      <Link href={'/delivery'}>Доставка</Link>  
     </nav> 
     </div>
   )
