@@ -1,18 +1,28 @@
   
   @media screen and (max-width:560px) {
 
-    #check_menu{
-      width: 40px;
-      height: 40px;
+    .mobile_menu{
+      background-color: #931010;
+      display: block;
       position: absolute;
-      z-index: 1;
-      opacity: 0;
-      cursor: pointer;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      max-height: 0;
+      font-size: 0;
+      overflow: hidden;
+      transition:.5s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      display: flex;
+      width: 0;
+      min-height: 900px;
     }
 
-    #check_menu:checked ~ .mobile_menu{
-      width: calc(100% - 100px);
-      min-height: 900px;
+    .mobile_menu > a{
+      margin-left: 5%;
+      margin-top: 10%;
     }
 
     .burger_span{
@@ -23,8 +33,48 @@
         width: 24px;
         height: 3px;
         background-color: white;
+        transition: 1s ease-in-out;
     }
 
+    .burger_hidden{
+      border-radius: 25%;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      width: 24px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .burger_span:first-child{
+      top: 16px;
+      transition: 1s ease-in-out;
+    }
+
+    .burger_span:last-child{
+      top: 32px;
+      transition: 1s ease-in-out;
+    }
+
+    .burger_hidden:first-child{
+      rotate: 45deg;
+      transform-origin: 20px 10px;
+      transition: 1s ease-in-out;
+    }
+
+    .burger_hidden:nth-child(2){
+      display: none;
+      transition: 1s ease-in-out;
+
+    }
+
+    .burger_hidden:last-child{
+      rotate: -45deg;
+      transform-origin: 12px -10px;
+      transition: 1s ease-in-out;
+    }
+
+/* 
     .burger_span::before{
         border-radius: 25%;
         content: '';
@@ -45,7 +95,7 @@
         width: 24px;
         height: 3px;
         background-color: white;
-    }
+    } */
 
 
 
@@ -68,30 +118,9 @@
       top: 30px;
     }
   
-    .mobile_menu{
-      background-color: #931010;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transform: translateY(100%);
-      max-height: 0;
-      font-size: 0;
-      overflow: hidden;
-      transition:.5s ease-in-out;
-      display: flex;
-      flex-direction: column;
-      font-size: 24px;
-      display: flex;
-      width: 0;
-    }
-
-    .mobile_menu > a{
-      margin-left: 5%;
-      margin-top: 10%;
-    }
 
     .burger_wrapper{
+      cursor: pointer;
       position: relative;
       border: black;
       width: 48px;

@@ -4,8 +4,6 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Burger from './menu/Burger';
-import { BsWhatsapp, BsTelegram } from "react-icons/bs";
-import { FaVk } from "react-icons/fa";
 import CallForm from './menu/CallForm';
 
 const Navbar = () => {

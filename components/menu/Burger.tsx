@@ -1,25 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from '../../styles/Burger.module.css';
 import Link from 'next/link';
 
 
 const Burger = () => {
+  const [open, setOpen] = useState(false)
+
+  let style = {
+      width: "calc(100% - 100px)",
+  }
+
+  function menuOpen(){
+    let menu = document.getElementsByTagName('nav')  
+  }
     
   return (
     <div>        
-        <input type={'checkbox'} className={styles.check_menu} id={styles.check_menu}/>
-    <div className={styles.burger_wrapper}>
-      <span className={styles.burger_span}></span>
+    <div onClick={() => setOpen(!open)} className={styles.burger_wrapper}>
+      <span className={open ? styles.burger_hidden : styles.burger_span}></span>
+      <span className={open ? styles.burger_hidden : styles.burger_span}></span>
+      <span className={open ? styles.burger_hidden : styles.burger_span}></span>
     </div>
-    <div className={styles.burger_close}>
-    <span className={styles.burger_close}></span>
-    </div>
-    <nav className={styles.mobile_menu}>
-      <Link href={'/'}>Главная</Link>
-      <Link href={'/catalog'}>Каталог</Link>
-      <Link href={''}>Контакты</Link>
-      <Link href={'#'}>Отзывы</Link>
-      <Link href={'/delivery'}>Доставка</Link>  
+    <nav className={styles.mobile_menu} style={open ? style : {}}>
+      <Link onClick={() => setOpen(!open)} href={'/'}>Главная</Link>
+      <Link onClick={() => setOpen(!open)} href={'/catalog'}>Каталог</Link>
+      <Link onClick={() => setOpen(!open)} href={''}>Контакты</Link>
+      <Link onClick={() => setOpen(!open)} href={'#'}>Отзывы</Link>
+      <Link onClick={() => setOpen(!open)} href={'/delivery'}>Доставка</Link>  
     </nav> 
     </div>
   )
