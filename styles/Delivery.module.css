@@ -11,6 +11,10 @@
     text-align: center;
   }
 
+.section{
+    padding: 20px;
+}
+
 .info{
     background-color: #f8f8f8;
     border-radius: 10px;
@@ -52,9 +56,9 @@
     margin-bottom: 15px;
 }
 
-.svgWrapper > svg{
+/* .svgWrapper > svg{
     transform: scale(2.5);
-}
+} */
 
 .boxTitle{
     margin-bottom: 0px;
@@ -67,10 +71,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
-.container{
-
-}
 
 .text{
     text-align: center;

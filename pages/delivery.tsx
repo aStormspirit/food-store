@@ -34,7 +34,7 @@ const delivery = () => {
       </div>
       <h1 className={styles.text}>ВАРИАНТЫ ОПЛАТЫ</h1>
       <div>
-        <div>
+        <div className={styles.section}>
           <div className={styles.box}>
             <div className={styles.svgWrapper}>
             <BsFillCreditCard2BackFill />
