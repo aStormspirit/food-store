@@ -36,14 +36,14 @@ const Product = () => {
       <div className={styles.container}>
           <div className={styles.left}>
             <div className={styles.imgContainer}>
-                <Image src={product.image} layout='fill' alt='image' objectFit='contain' />
+                <Image src={product.image} fill alt='image' />
             </div>
           </div>
           <div className={styles.right}>
               <h1 className={styles.title}>{product.name}</h1>
               <span className={styles.price}>&#8381;{prices}</span>
               <p className={styles.desc}>{product.short_description}</p>
-              <h3 className={styles.choose}>Выберите размер</h3>
+              {/* <h3 className={styles.choose}>Выберите размер</h3>
               <div className={styles.sizes}>
                 <div className={styles.size} onClick={() => handleSize(0)}>
                     <Image src='/img/size.png' layout='fill' alt='' />
@@ -57,7 +57,7 @@ const Product = () => {
                     <Image src='/img/size.png' layout='fill' alt='' />
                     <span className={styles.number}>7кг</span>
                 </div>
-              </div>
+              </div> */}
               <h3 className={styles.choose}>Выберите способ доставки</h3>
               <div className={styles.ingredients}>
                   <div className={styles.option}>

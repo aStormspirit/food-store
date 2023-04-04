@@ -24,7 +24,7 @@ const Burger = () => {
     <nav className={styles.mobile_menu} style={open ? style : {}}>
       <Link onClick={() => setOpen(!open)} href={'/'}>Главная</Link>
       <Link onClick={() => setOpen(!open)} href={'/catalog'}>Каталог</Link>
-      <Link onClick={() => setOpen(!open)} href={''}>Контакты</Link>
+      <Link onClick={() => setOpen(!open)} href={'/contacts'}>Контакты</Link>
       <Link onClick={() => setOpen(!open)} href={'#'}>Отзывы</Link>
       <Link onClick={() => setOpen(!open)} href={'/delivery'}>Доставка</Link>  
     </nav> 

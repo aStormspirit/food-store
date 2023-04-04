@@ -40,7 +40,8 @@ export default function Home() {
         <link rel="icon" href="/img/logo.jpeg" />
       </Head>
       <Banner />
-      <ProductList productsList={productsList} />
+      <h1 className={styles.title}>Мы доставляем</h1>
+      {/* <ProductList productsList={productsList} /> */}
     </div>
   )
 }
