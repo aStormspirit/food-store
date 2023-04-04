@@ -37,14 +37,14 @@ const delivery = () => {
         <div className={styles.section}>
           <div className={styles.box}>
             <div className={styles.svgWrapper}>
-            <BsFillCreditCard2BackFill />
+            <BsFillCreditCard2BackFill className={styles.svg} />
             </div>
             <h2 className={styles.boxTitle}>Банковской картой</h2>
             <span className={styles.boxText}>при получении</span>
           </div>
           <div className={styles.box}>
           <div className={styles.svgWrapper}>
-            <GiWallet />
+            <GiWallet className={styles.svg} />
           </div>
             <h2 className={styles.boxTitle}>Оплата наличными</h2>
             <span className={styles.boxText}>при получении</span>
