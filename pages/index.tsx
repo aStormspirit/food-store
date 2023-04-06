@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Banner from '../components/Banner'
 import ProductList from '../components/ProductList'
+import Card from '../components/Card'
 
 interface PL {
   id: number,
@@ -41,7 +42,18 @@ export default function Home() {
       </Head>
       <Banner />
       <h1 className={styles.title}>Мы доставляем</h1>
-      {/* <ProductList productsList={productsList} /> */}
+      <div className={styles.cardWrapper}>
+        <Card />
+      </div>
+      <div className={styles.infoWrapper}>
+      <div className={styles.info}>
+        <h2 className={styles.infoTitle}><b>с заботой</b> о наших клиентах</h2>
+        <p> Мы поставляем мясо в гипермаркеты, рестораны и лично в руки всем, кто любит качественный и свежий продукт.</p>
+        <p>Каждая партия товара проходит ветеринарную экспертизу, на все упаковки наносится дата производства, срок годности. Мы не мясники и не магазин – мы поставщики. Доставляем в первозданном виде прямо с производства. Мы за вкусное мясо у вас дома! </p>
+      </div>
+      </div>
+
+      {/*<ProductList productsList={productsList} />*/}
     </div>
   )
 }

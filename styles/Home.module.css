@@ -1,3 +1,33 @@
 .title {
     text-align: center;
   }
+
+.cardWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.infoWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.info{
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: rgb(172,172,172);
+  background: linear-gradient(190deg, rgba(172,172,172,1) 0%, rgba(255,255,255,1) 100%);
+  text-align: center;
+  border-radius: 50px;
+  width: 80%;
+  padding: 10px;
+}
+
+.infoTitle{
+  font-size: 32px;
+}
+
+.infoTitle > b{
+  color: brown;
+}

@@ -2,7 +2,7 @@
   @media screen and (max-width:560px) {
 
     .mobile_menu{
-      background-color: #931010;
+      background-color: #acacac;
       display: block;
       position: absolute;
       bottom: 0;
@@ -48,30 +48,30 @@
 
     .burger_span:first-child{
       top: 16px;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
     .burger_span:last-child{
       top: 32px;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
     .burger_hidden:first-child{
       rotate: 45deg;
       transform-origin: 20px 10px;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
     .burger_hidden:nth-child(2){
       display: none;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
 
     }
 
     .burger_hidden:last-child{
       rotate: -45deg;
       transform-origin: 12px -10px;
-      transition: 1s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
 /* 

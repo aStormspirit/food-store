@@ -7,7 +7,8 @@
 }
 
 .contentWrapper{
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
   }
 
@@ -78,7 +79,7 @@
 }
 
 .contentWrapper{
-    grid-template-rows: 1fr 1fr 1fr;
+    flex-direction: column;
 }
 
 .info{
