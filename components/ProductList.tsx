@@ -3,6 +3,8 @@ import styles from '../styles/ProductList.module.css'
 import ProductCard from './ProductCard'
 
 const ProductList = ({productsList}) => {
+
+
   return (
     <div className={styles.container}>
         <h1 className={styles.title}>Мы доставляем</h1>

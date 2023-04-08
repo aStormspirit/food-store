@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/Banner'
 import ProductList from '../components/ProductList'
 import Card from '../components/Card'
+import Link from 'next/link'
 
 interface PL {
   id: number,
@@ -25,11 +26,25 @@ export default function Home() {
       "short_description": "Куриные крылышки, в вакумной упаковке"
     },
     {
-      "id": 1,
-      "name": 'Куриные крылышки',
-      "image": '/img/product.jpeg',
-      "price": 225,
-      "short_description": "Куриные крылышки, в вакумной упаковке"
+      "id": 2,
+      "name": 'Тушка курицы',
+      "image": '/img/tyshka.jpg',
+      "price": 180,
+      "short_description": "Куриная тушка, охлажденка"
+    },
+    {
+      "id": 3,
+      "name": 'Грудка курицы',
+      "image": '/img/grudka.jpg',
+      "price": 190,
+      "short_description": "Грудка курицы, охлажденка"
+    },
+    {
+      "id": 4,
+      "name": 'крылья курицы',
+      "image": '/img/crilo.jpg',
+      "price": 180,
+      "short_description": "крыло куриное, охлажденка"
     }
   ]
 
@@ -43,7 +58,9 @@ export default function Home() {
       <Banner />
       <h1 className={styles.title}>Мы доставляем</h1>
       <div className={styles.cardWrapper}>
-        <Card />
+        <Link href={'/catalog'}>
+          <Card />
+        </Link>
       </div>
       <div className={styles.infoWrapper}>
       <div className={styles.info}>
