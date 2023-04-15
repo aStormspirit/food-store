@@ -1,8 +1,8 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Cart.module.css'
 import Image from 'next/image'
 
-import {useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import OrderDetail from '../components/OrderDetail'
 
@@ -16,45 +16,36 @@ const Cart = () => {
       <div className={styles.left}>
         <table className={styles.table}>
           <tbody>
-          <tr className={styles.trTitle}>
-            <th>Товар</th>
-            <th>Название</th>
-            <th>Дополнительно</th>
-            <th>Цена</th>
-            <th>Колличество</th>
-            <th>Итого</th>
-          </tr>
-          {cart.products.map((product) => (
-          <tr className={styles.tr} key={product.id}>
-            <td>
-              <div className={styles.imgContainer}>
-                <Image
-                  src={product.image}
-                  layout="fill"
-                  objectFit="cover"
-                  alt=""
-                />
-              </div>
-            </td>
-            <td>
-              <span className={styles.name}>{product.name}</span>
-            </td>
-            <td>
-              <span className={styles.extras}>
-                {product.short_description}
-              </span>
-            </td>
-            <td>
-              <span className={styles.price}>&#8381;{product.prices}</span>
-            </td>
-            <td>
-              <span className={styles.quantity}>{product.quantity}</span>
-            </td>
-            <td>
-              <span className={styles.total}>&#8381;{product.prices * product.quantity}</span>
-            </td>
-          </tr>
-          ))}
+            <tr className={styles.trTitle}>
+              <th>Товар</th>
+              <th>Название</th>
+              <th>Цена</th>
+              <th>Колличество</th>
+              <th>Итого</th>
+            </tr>
+            {cart.products.map((product) => (
+              <tr className={styles.tr} key={product.id}>
+                <td>
+                  <div className={styles.imgContainer}>
+                    <Image src={product.image} fill alt="product" />
+                  </div>
+                </td>
+                <td>
+                  <span className={styles.name}>{product.name}</span>
+                </td>
+                <td>
+                  <span className={styles.price}>&#8381;{product.prices}</span>
+                </td>
+                <td>
+                  <span className={styles.quantity}>{product.quantity}</span>
+                </td>
+                <td>
+                  <span className={styles.total}>
+                    &#8381;{product.prices * product.quantity}
+                  </span>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -72,11 +63,14 @@ const Cart = () => {
           </div>
           {open ? (
             <div className={styles.cashPayment}>
-              <button className={styles.button} onClick={() => setCash(true)}>Оплатить при доставке</button>
-              <button className={styles.button}>Оплатить картой</button>
+              <button className={styles.button} onClick={() => setCash(true)}>
+                Оплатить при доставке
+              </button>
             </div>
           ) : (
-            <button onClick={() => setOpen(true)} className={styles.button}>Заказать сейчас!</button>
+            <button onClick={() => setOpen(true)} className={styles.button}>
+              Заказать сейчас!
+            </button>
           )}
         </div>
       </div>

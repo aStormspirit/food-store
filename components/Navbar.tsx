@@ -32,8 +32,12 @@ const Navbar = () => {
           <Link href={'/'} className={styles.link}>
           <li className={styles.listItem}>Главная</li>
           </Link>
+          <Link href={'/delivery'} className={styles.link}>
           <li className={styles.listItem}>Доставка</li>
+          </Link>
+          <Link href={'/contacts'} className={styles.link}>
           <li className={styles.listItem}>Контакты</li>
+          </Link>
           <li className={styles.listItem}>Отзывы</li>
         </ul>
       </div>

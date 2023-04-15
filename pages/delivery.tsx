@@ -25,27 +25,34 @@ const delivery = () => {
           <p>Минимальная сумма заказа</p>
           <p>В пределах КАД – 2 000 руб.</p>
           <p>Интервалы доставки:</p>
-          <p>ПН - СБ: 11.00 - 15.00, 15.00 - 19.00, 19.00 - 22.00</p> 
+          <p>ПН - СБ: 11.00 - 15.00, 15.00 - 19.00, 19.00 - 22.00</p>
         </div>
       </div>
       <div className={styles.info}>
-        <h2 className={styles.infoText}>Мы доставляем мясо с производства Оно упаковано в заводские упаковки по 1-3 кг</h2>
-        <p className={styles.infoContent}>Цену на заказ определяет вес мяса, который в каждой упаковке индивидуален В заказе возможна погрешность по весу и стоимости в пределах 10%</p>
+        <h2 className={styles.infoText}>
+          Мы доставляем мясо с производства Оно упаковано в заводские упаковки
+          по 1-3 кг
+        </h2>
+        <p className={styles.infoContent}>
+          Цену на заказ определяет вес мяса, который в каждой упаковке
+          индивидуален В заказе возможна погрешность по весу и стоимости в
+          пределах 10%
+        </p>
       </div>
       <h1 className={styles.text}>ВАРИАНТЫ ОПЛАТЫ</h1>
       <div>
         <div className={styles.section}>
           <div className={styles.box}>
             <div className={styles.svgWrapper}>
-            <BsFillCreditCard2BackFill className={styles.svg} />
+              <BsFillCreditCard2BackFill className={styles.svg} />
             </div>
             <h2 className={styles.boxTitle}>Банковской картой</h2>
             <span className={styles.boxText}>при получении</span>
           </div>
           <div className={styles.box}>
-          <div className={styles.svgWrapper}>
-            <GiWallet className={styles.svg} />
-          </div>
+            <div className={styles.svgWrapper}>
+              <GiWallet className={styles.svg} />
+            </div>
             <h2 className={styles.boxTitle}>Оплата наличными</h2>
             <span className={styles.boxText}>при получении</span>
           </div>
