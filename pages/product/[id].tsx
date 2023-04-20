@@ -19,11 +19,6 @@ const Product = ({ product }: any) => {
   const [prices, setPrices] = useState(newprice)
   const dispatch = useDispatch()
 
-  const handleSize = (sizeIndex) => {
-    const sprice = [newprice, newprice + 50, newprice + 100]
-    setPrices(sprice[sizeIndex])
-  }
-
   const handleClick = () => {
     dispatch(addProduct({ ...product, prices, quantity }))
   }
@@ -61,7 +56,7 @@ const Product = ({ product }: any) => {
           </div>
         </div>
         <div className={styles.add}>
-          <p>Колличество упаковок:</p>
+          <p>Колличество/Вес Кг.:</p>
           <input
             onChange={(e: any) => setQuantity(e.target.value)}
             type="number"

@@ -13,8 +13,8 @@ const ProductCard = ({ pizza }) => {
         <Image
           src={pizza.image}
           alt="product"
-          width={width > 500 ? 500 : 200}
-          height={width > 500 ? 500 : 200}
+          width={width > 500 ? 300 : 200}
+          height={width > 500 ? 300 : 200}
         />
       </Link>
       <h1 className={styles.title}>{pizza.name}</h1>

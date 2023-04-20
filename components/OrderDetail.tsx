@@ -4,42 +4,42 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { reset } from '../redux/cartSlice'
+import axios from 'axios'
 
 const OrderDetail = ({ cart, total, setCash }) => {
   const [customer, setCustomer] = useState('')
   const [number, setNumber] = useState('')
   const [address, setAddress] = useState('')
-  const [csrftoken, setCsrftoken] = useState('')
-  const router = useRouter()
   const dispatch = useDispatch()
 
-  let orders_ids = cart.products.map((product) => product.id).join(',')
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/cart/api/csrf', {
-      credentials: 'include',
-    }).then((res) => {
-      setCsrftoken(res.headers.get('X-CSRFToken'))
-    })
-  }, [])
+  let orders_name = cart.products.map((product) => product.name).join(',')
+  let orders_quantity = cart.products
+    .map((product) => product.quantity)
+    .join(',')
 
   function handleClick() {
-    fetch('http://localhost:3000/api/orders', {
-      method: 'POST',
-      body: JSON.stringify({
-        customer: customer,
-        phone: number,
-        address: address,
-        csrftoken: csrftoken,
-        orders_id: orders_ids,
-        total: total,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => router.push(`/orders/${res.id}`))
-      .catch((err) => console.log(err))
+    let url =
+      'https://api.telegram.org/bot6221829880:AAGnKgHTu2F55iY5pnDGvyofSpACmsKLTww/sendMessage?chat_id=1038663358&text='
+    url +=
+      'Новый заказ:' +
+      '%0A' +
+      'Покупатель: ' +
+      customer +
+      '%0A' +
+      'Номер телефона: ' +
+      number +
+      '%0A' +
+      'Адрес: ' +
+      address +
+      '%0A' +
+      'Товар: ' +
+      orders_name +
+      '%0A' +
+      orders_quantity
+    axios.get(url)
 
     dispatch(reset())
+    setCash(false)
   }
 
   return (
@@ -59,7 +59,7 @@ const OrderDetail = ({ cart, total, setCash }) => {
             Имя Фамилия
           </label>
           <input
-            placeholder="John Doe"
+            placeholder="Имя Фамилия"
             type="text"
             onChange={(e) => setCustomer(e.target.value)}
             className={styles.input}
@@ -70,8 +70,8 @@ const OrderDetail = ({ cart, total, setCash }) => {
             Номер телефона
           </label>
           <input
-            placeholder="+1234567"
-            type="text"
+            placeholder="+7 (___) ___-__-__"
+            type="tel"
             className={styles.input}
             onChange={(e) => setNumber(e.target.value)}
           />
