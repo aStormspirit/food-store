@@ -5,14 +5,6 @@ import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 import { prisma } from '../../prisma/client'
 
-interface Product {
-  id: number
-  image: string
-  name: string
-  price: number
-  short_desc: string
-}
-
 const Product = ({ product }: any) => {
   let newprice = Number(product.price)
   const [quantity, setQuantity] = useState(1)

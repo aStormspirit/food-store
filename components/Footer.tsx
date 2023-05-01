@@ -2,29 +2,28 @@ import React from 'react'
 import styles from '../styles/Footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsWhatsapp, BsTelegram } from "react-icons/bs";
-import { FaVk } from "react-icons/fa";
-
+import { BsWhatsapp, BsTelegram } from 'react-icons/bs'
+import { FaVk } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item} style={{flexDirection: 'column'}}>
+      <div className={styles.item} style={{ flexDirection: 'column' }}>
         <div className={styles.imgWrapper}>
-        <Image src='/img/logo.jpeg' alt='logo' width='80' height='69' objectFit='contain'></Image>
+          <Image src="/img/logo.jpeg" alt="logo" width="80" height="69"></Image>
         </div>
-      <p className={styles.desc}>Магазин HUBерма</p>
-      <div className={styles.link}>
-      <Link href={'/'}>Политика конфиденциальности</Link>
-      </div>
+        <p className={styles.desc}>Магазин HUBерма</p>
+        <div className={styles.link}>
+          <Link href={'/'}>Политика конфиденциальности</Link>
+        </div>
       </div>
       <div className={styles.item}>
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>Меню</li>
+            <li className={styles.listItem}>Каталог</li>
             <li className={styles.listItem}>О доставке</li>
             <li className={styles.listItem}>Акции</li>
-            <li className={styles.listItem}>Адреса магазинов</li>
+            <li className={styles.listItem}>Адрес производства</li>
           </ul>
         </div>
         <div className={styles.listWrapper}>
@@ -37,22 +36,22 @@ const Footer = () => {
         </div>
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>Пицца</li>
-            <li className={styles.listItem}>Роллы</li>
-            <li className={styles.listItem}>Сеты</li>
-            <li className={styles.listItem}>Суши</li>
+            <li className={styles.listItem}>Курица</li>
+            <li className={styles.listItem}>Свинина</li>
+            <li className={styles.listItem}>Говядина</li>
+            <li className={styles.listItem}>Индейка</li>
           </ul>
         </div>
       </div>
       <div className={styles.icons}>
         <div>
-        <BsWhatsapp />
+          <BsWhatsapp />
         </div>
         <div>
-        <BsTelegram />
+          <BsTelegram />
         </div>
         <div>
-        <FaVk />
+          <FaVk />
         </div>
       </div>
     </div>

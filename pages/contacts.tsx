@@ -4,10 +4,6 @@ import styles from '../styles/Contacts.module.css'
 const contacts = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        <span className={styles.titleText}>КОНТАКТНАЯ</span> ИНФОРМАЦИЯ
-      </h1>
-
       <div className={styles.form}>
         <p className={styles.formText}>
           Интернет-магазин мясных продуктов huberma
@@ -66,7 +62,7 @@ const contacts = () => {
       </div>
       <div className={styles.contactText}>
         <div>
-          <span>Общество с ограниченной ответственностью</span> «Дельта»
+          <span>Индивидуальный предприниматель</span> Кайгородов
         </div>
         <p>
           Государственное Учреждение Управление Пенсионного фонда РФ по

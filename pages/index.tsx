@@ -3,8 +3,9 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/Banner'
 import { prisma } from '../prisma/client'
 import ProductList from '../components/ProductList'
+import { NextPage } from 'next'
 
-export default function Home({ data }: any) {
+const Home: NextPage<Products> = ({ data }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -40,3 +41,5 @@ export const getServerSideProps = async ({ req }) => {
   const data = await prisma.product.findMany()
   return { props: { data } }
 }
+
+export default Home

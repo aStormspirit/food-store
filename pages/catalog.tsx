@@ -1,8 +1,9 @@
 import React from 'react'
 import ProductList from '../components/ProductList'
 import { prisma } from '../prisma/client'
+import { NextPage } from 'next'
 
-const catalog = ({ data }) => {
+const catalog: NextPage<Products> = ({ data }) => {
   return (
     <div>
       <ProductList productsList={data} />
@@ -10,9 +11,9 @@ const catalog = ({ data }) => {
   )
 }
 
-export default catalog
-
 export const getServerSideProps = async ({ req }) => {
   const data = await prisma.product.findMany()
   return { props: { data } }
 }
+
+export default catalog

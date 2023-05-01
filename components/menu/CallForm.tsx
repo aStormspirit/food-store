@@ -6,8 +6,15 @@ import axios from 'axios'
 
 const CallForm = ({ setOpen }) => {
   const [number, setNumber] = useState('')
+  const [valid, setValid] = useState(true)
+
+  console.log(valid)
 
   function sendNumber(number: string) {
+    if (number == '') {
+      setValid(false)
+      return false
+    }
     let url =
       'https://api.telegram.org/bot6221829880:AAGnKgHTu2F55iY5pnDGvyofSpACmsKLTww/sendMessage?chat_id=1038663358&text='
     url += number
@@ -27,17 +34,22 @@ const CallForm = ({ setOpen }) => {
         <h1 className={styles.title}>
           Оставьте ваш номер телефона и мы перезвоним
         </h1>
-        <div className={styles.item}>
+        <div>
           <input
             placeholder="+7 (___) ___-__-__"
             type="tel"
-            className={styles.input}
+            className={valid ? styles.input : styles.error}
             onChange={(e) => setNumber(e.target.value)}
           />
+          <div>
+            <button
+              onClick={() => sendNumber(number)}
+              className={styles.button}
+            >
+              Отправить
+            </button>
+          </div>
         </div>
-        <button onClick={() => sendNumber(number)} className={styles.button}>
-          Отправить
-        </button>
         <div className={styles.formText}>
           <p>
             {' '}
