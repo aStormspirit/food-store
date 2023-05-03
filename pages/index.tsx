@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Banner from '../components/Banner'
 import { prisma } from '../prisma/client'
 import ProductList from '../components/ProductList'
 import { NextPage } from 'next'
+import Slider from '../components/Slider'
 
 const Home: NextPage<Products> = ({ data }) => {
   return (
@@ -13,9 +13,10 @@ const Home: NextPage<Products> = ({ data }) => {
         <meta name="description" content="Huberma shop" />
         <link rel="icon" href="/img/logo.jpeg" />
       </Head>
-      <Banner />
+      <Slider />
+      <section></section>
       <ProductList productsList={data} />
-      <div className={styles.infoWrapper}>
+      {/* <section className={styles.infoWrapper}>
         <div className={styles.info}>
           <h2 className={styles.infoTitle}>
             <b>с заботой</b> о наших клиентах
@@ -32,7 +33,14 @@ const Home: NextPage<Products> = ({ data }) => {
             производства. Мы за вкусное мясо у вас дома!{' '}
           </p>
         </div>
-      </div>
+      </section> */}
+      <section className={styles.container}>
+        <div className={styles.info}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
     </div>
   )
 }

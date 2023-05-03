@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 import { prisma } from '../../prisma/client'
+import { NextPage } from 'next'
 
-const Product = ({ product }: any) => {
+const Product: NextPage<any> = ({ product }) => {
   let newprice = Number(product.price)
   const [quantity, setQuantity] = useState(1)
   const [prices, setPrices] = useState(newprice)

@@ -1,157 +1,152 @@
 .container {
-    height: 100px;
-    padding: 0px 50px;
-    background-color: #95451d;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  height: 100px;
+  padding: 0px 50px;
+  background-color: #95451d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(2) {
+  flex: 2 1;
+}
+
+.item:last-child {
+  justify-content: flex-end;
+}
+
+.callButton {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.texts {
+  margin-left: 20px;
+  color: white;
+}
+
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+}
+
+.listItem {
+  margin: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.link {
+  cursor: pointer;
+  display: flex;
+}
+
+.logoText {
+  font-size: 24px;
+  color: white;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
+}
+
+.item:last-child {
+  display: none;
+}
+
+#mobile_logo {
+  display: none;
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    display: grid;
+    height: 160px;
+    grid-template-areas:
+      'logo nav'
+      'phone cart';
   }
-  
-  .item {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .item:nth-child(2) {
-    flex: 3;
-  }
-  
-  .item:last-child {
-    justify-content: flex-end;
-  }
-  
-  .callButton {
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-  }
-  
-  .texts {
-    margin-left: 20px;
-    color: white;
-  }
-  
-  .text:first-child {
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .text:last-child {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
+
   .list {
-    padding: 0;
+    display: none !important;
+  }
+  .item:nth-child(2) {
+    grid-area: logo;
+  }
+
+  .item:last-child {
     display: flex;
+    grid-area: nav;
+  }
+
+  .item:nth-child(1) {
+    flex: 2;
+    grid-area: phone;
+  }
+
+  .item:nth-child(4) {
+    flex: 2;
+    grid-area: cart;
+  }
+
+  #mobile_logo {
+    display: flex;
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    list-style: none;
-    color: white;
   }
-  
-  .listItem {
-    margin: 20px;
-    font-weight: 500;
+
+  #mobile_logo > div {
+    margin: 0;
+    width: 40px;
+  }
+
+  #mobile_logo > div > svg {
     cursor: pointer;
+    transform: scale(1.5);
   }
-
-  .link{
-    cursor: pointer;
-    display: flex;
-  }
-
-
-  .logoText{
-    font-size: 24px;
-    color: white;
-  }
-  
-  .cart{
-      position: relative;
-      cursor: pointer;
-  }
-  
-  .counter{
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: white;
-      padding: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #d1411e;
-  }
-
-  .item:last-child{
-    display: none;
-  }
-
-  
-  #mobile_logo{
-    display: none;
-  }
-  
-
-  
-  @media screen and (max-width:560px) {
-    .container{
-      display: grid;
-      height: 160px;
-      grid-template-areas: "logo nav"
-                           "phone cart";
-    }
-
-    .list{
-      display: none !important;
-    }
-    .item:nth-child(2) {
-      grid-area: logo;
-    }
-
-    .item:last-child{
-      display: flex;
-      grid-area: nav;
-    }
-  
-    .item:nth-child(1) {
-      flex: 2;
-      grid-area: phone;
-    }
-
-    .item:nth-child(4) {
-      flex: 2;
-      grid-area: cart;
-    }
-
-
-    #mobile_logo{
-      display: flex;
-      flex: 1;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    #mobile_logo>div{
-        margin: 0;
-        width: 40px;
-    }
-  
-    #mobile_logo>div>svg{
-        cursor: pointer;
-        transform: scale(1.5);
-    }
-
-  }
+}

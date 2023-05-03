@@ -5,7 +5,7 @@ import { GiWallet } from 'react-icons/gi'
 
 const delivery = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h1 className={styles.text}>ДОСТАВКА И ОПЛАТА</h1>
       <div className={styles.contentWrapper}>
         <div>
@@ -58,7 +58,7 @@ const delivery = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

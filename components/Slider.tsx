@@ -1,14 +1,39 @@
 import React, { useState } from 'react'
 import styles from '../styles/Featured.module.css'
 import Image from 'next/image'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 const Slider = () => {
   const [index, setIndex] = useState(0)
 
   const images = [
-    '/img/slider-1.jpeg',
-    '/img/slider-2.jpeg',
-    '/img/slider-3.jpeg',
+    {
+      path: '/img/slider-1.jpeg',
+      text: 'Бесплатная доставка',
+      html: (
+        <a href="" className={styles.btn__promo}>
+          Сделать заказ
+        </a>
+      ),
+    },
+    {
+      path: '/img/slider-2.jpeg',
+      text: 'Свежее мясо',
+      html: (
+        <a href="" className={styles.btn__promo}>
+          Сделать заказ
+        </a>
+      ),
+    },
+    {
+      path: '/img/slider-3.jpeg',
+      text: 'Индивидуальный подход',
+      html: (
+        <a href="" className={styles.btn__promo}>
+          Сделать заказ
+        </a>
+      ),
+    },
   ]
 
   const handleArrow = (direction: any) => {
@@ -19,15 +44,16 @@ const Slider = () => {
       setIndex(index !== 2 ? index + 1 : 0)
     }
   }
-
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div
         className={styles.arrowContainer}
         style={{ left: 0 }}
         onClick={() => handleArrow('l')}
       >
-        <Image src="/img/arrowl.png" alt="arrowleft" />
+        <div className={styles.arrowWrapper}>
+          <FaAngleLeft />
+        </div>
       </div>
       <div
         className={styles.wrapper}
@@ -35,7 +61,9 @@ const Slider = () => {
       >
         {images.map((img, i) => (
           <div className={styles.imgContainer} key={i}>
-            <Image src={img} key={i} alt="featured" />
+            <h1 className={styles.sliderText}>{img.text}</h1>
+            <Image src={img.path} fill key={i} alt="featured" />
+            {img.html}
           </div>
         ))}
       </div>
@@ -44,9 +72,11 @@ const Slider = () => {
         style={{ right: 0 }}
         onClick={() => handleArrow('r')}
       >
-        <Image src="/img/arrowr.png" alt="arrowleft" />
+        <div className={styles.arrowWrapper}>
+          <FaAngleRight />
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
