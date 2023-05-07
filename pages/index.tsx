@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css'
 import { prisma } from '../prisma/client'
 import ProductList from '../components/ProductList'
 import { NextPage } from 'next'
-import Slider from '../components/Slider'
 
 const Home: NextPage<Products> = ({ data }) => {
   return (
@@ -13,7 +12,6 @@ const Home: NextPage<Products> = ({ data }) => {
         <meta name="description" content="Huberma shop" />
         <link rel="icon" href="/img/logo.jpeg" />
       </Head>
-      <Slider />
       <section></section>
       <ProductList productsList={data} />
       {/* <section className={styles.infoWrapper}>
