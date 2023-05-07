@@ -15,6 +15,7 @@ const ProductCard = ({ pizza }) => {
           alt="product"
           width={width > 500 ? 300 : 200}
           height={width > 500 ? 300 : 200}
+          loading="lazy"
         />
       </Link>
       <h1 className={styles.title}>{pizza.name}</h1>

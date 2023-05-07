@@ -80,7 +80,7 @@
   border: 1px solid #c3c8de;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   .container {
     height: 50vh;
   }

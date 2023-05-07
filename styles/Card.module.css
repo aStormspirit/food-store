@@ -1,17 +1,16 @@
-.container{
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    color: #620513;
-    display: block;
-    height: auto;
-    max-width: 281px;
-    overflow: hidden;
-    padding-bottom: 1px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 20px;
+.container {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  color: #620513;
+  display: block;
+  height: auto;
+  max-width: 281px;
+  overflow: hidden;
+  padding-bottom: 1px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 560px) {
 }

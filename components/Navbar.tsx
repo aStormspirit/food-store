@@ -20,11 +20,14 @@ const Navbar = () => {
             width="32"
             height="32"
             alt="telephone"
+            loading="lazy"
           ></Image>
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>Заказать</div>
-          <div className={styles.text}>{'+7(951)683-53-76'}</div>
+          <a type="tel" href="tel:+79516835376" className={styles.text}>
+            {'+7(951)683-53-76'}
+          </a>
         </div>
       </div>
       <div className={styles.item}>
@@ -35,6 +38,7 @@ const Navbar = () => {
             alt="logo"
             width="251"
             height="106"
+            loading="lazy"
           />
         </Link>
       </div>
@@ -63,6 +67,7 @@ const Navbar = () => {
               alt="cart"
               width="30"
               height="30"
+              loading="lazy"
             ></Image>
             <div className={styles.counter}>{quantity}</div>
           </div>

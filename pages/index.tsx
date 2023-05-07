@@ -1,19 +1,34 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { prisma } from '../prisma/client'
-import ProductList from '../components/ProductList'
+// import { prisma } from '../prisma/client'
+// import ProductList from '../components/ProductList'
 import { NextPage } from 'next'
 
-const Home: NextPage<Products> = ({ data }) => {
+const Home: NextPage<Products> = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Huberma</title>
         <meta name="description" content="Huberma shop" />
-        <link rel="icon" href="/img/logo.jpeg" />
+        <link rel="icon" href="/logo.jpeg" />
       </Head>
-      <section></section>
-      <ProductList productsList={data} />
+      <section className={styles.hero}>
+        <div>
+          <h1>Бесплатная доставка</h1>
+          <p></p>
+        </div>
+        <a href="/catalog" className={styles.btn__promo}>
+          <span>Сделать заказ</span>
+        </a>
+      </section>
+      {/* <ProductList productsList={data} /> */}
+      <section className={styles.container}>
+        <div className={styles.bot}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
       {/* <section className={styles.infoWrapper}>
         <div className={styles.info}>
           <h2 className={styles.infoTitle}>
@@ -32,20 +47,13 @@ const Home: NextPage<Products> = ({ data }) => {
           </p>
         </div>
       </section> */}
-      <section className={styles.container}>
-        <div className={styles.info}>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </section>
     </div>
   )
 }
 
-export const getServerSideProps = async ({ req }) => {
-  const data = await prisma.product.findMany()
-  return { props: { data } }
-}
+// export const getServerSideProps = async ({ req }) => {
+//   const data = await prisma.product.findMany()
+//   return { props: { data } }
+// }
 
 export default Home
