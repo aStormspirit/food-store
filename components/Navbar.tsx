@@ -31,12 +31,11 @@ const Navbar = () => {
         <Link href={'/'} className={styles.link}>
           <Image
             className={styles.link}
-            src="/img/logo.png"
+            src="/img/logo.jpg"
             alt="logo"
-            width="100"
-            height="69"
+            width="251"
+            height="106"
           />
-          <p className={styles.logoText}>ерма</p>
         </Link>
       </div>
       <div className={styles.item}>

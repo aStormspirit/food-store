@@ -1,7 +1,7 @@
 .container {
-  height: 100px;
+  height: 120px;
   padding: 0px 50px;
-  background-color: #95451d;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,7 +103,7 @@
 @media screen and (max-width: 560px) {
   .container {
     display: grid;
-    height: 160px;
+    height: 180px;
     grid-template-areas:
       'logo nav'
       'phone cart';
@@ -122,6 +122,7 @@
   }
 
   .item:nth-child(1) {
+    margin-left: 20px;
     flex: 2;
     grid-area: phone;
   }

@@ -12,7 +12,7 @@ const Slider = () => {
       text: 'Бесплатная доставка',
       html: (
         <a href="" className={styles.btn__promo}>
-          Сделать заказ
+          <span>Сделать заказ</span>
         </a>
       ),
     },
@@ -21,7 +21,7 @@ const Slider = () => {
       text: 'Свежее мясо',
       html: (
         <a href="" className={styles.btn__promo}>
-          Сделать заказ
+          <span>Сделать заказ</span>
         </a>
       ),
     },
@@ -30,7 +30,7 @@ const Slider = () => {
       text: 'Индивидуальный подход',
       html: (
         <a href="" className={styles.btn__promo}>
-          Сделать заказ
+          <span>Сделать заказ</span>
         </a>
       ),
     },
