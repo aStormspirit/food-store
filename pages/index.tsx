@@ -1,21 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-// import { prisma } from '../prisma/client'
-// import ProductList from '../components/ProductList'
 import { NextPage } from 'next'
 
-const Home: NextPage<Products> = () => {
+const Home: NextPage<any> = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>Huberma</title>
         <meta name="description" content="Huberma shop" />
-        <link rel="icon" href="/logo.jpeg" />
+        <link rel="icon" href="/img/logo.jpeg" />
       </Head>
       <section className={styles.hero}>
-        <div>
+        <div className={styles.hero__slogan}>
           <h1>Бесплатная доставка</h1>
-          <p></p>
+          <p>
+            Заказывая у нас, вы получаете бесплатную доставку до вашего
+            заведения.
+          </p>
         </div>
         <a href="/catalog" className={styles.btn__promo}>
           <span>Сделать заказ</span>

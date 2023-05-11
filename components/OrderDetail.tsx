@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import styles from '../styles/OrderDetail.module.css'
 import { AiOutlineClose } from 'react-icons/ai'
-import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { reset } from '../redux/cartSlice'
 import axios from 'axios'
+import { NextPage } from 'next'
 
-const OrderDetail = ({ cart, total, setCash }) => {
+const OrderDetail: NextPage<any> = ({ cart, total, setCash }) => {
   const [customer, setCustomer] = useState('')
   const [number, setNumber] = useState('')
   const [address, setAddress] = useState('')

@@ -6,7 +6,8 @@ import { addProduct } from '../../redux/cartSlice'
 import { prisma } from '../../prisma/client'
 import { NextPage } from 'next'
 
-const Product: NextPage<any> = ({ product }) => {
+const Product: NextPage<{ product: Product }> = ({ product }) => {
+  console.log(product)
   let newprice = Number(product.price)
   const [quantity, setQuantity] = useState(1)
   const [prices, setPrices] = useState(newprice)
@@ -26,7 +27,7 @@ const Product: NextPage<any> = ({ product }) => {
       <div className={styles.right}>
         <h1 className={styles.title}>{product.name}</h1>
         <span className={styles.price}>&#8381;{prices}</span>
-        <p className={styles.desc}>{product.short_description}</p>
+        <p className={styles.desc}>{product.short_desc}</p>
         <h3 className={styles.choose}>Выберите способ доставки</h3>
         <div className={styles.ingredients}>
           <div className={styles.option}>

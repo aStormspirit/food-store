@@ -21,7 +21,7 @@ const Footer = () => {
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
             <li className={styles.listItem}>Каталог</li>
-            <li className={styles.listItem}>О доставке</li>
+            <li className={styles.listItem}>Доставке</li>
             <li className={styles.listItem}>Акции</li>
             <li className={styles.listItem}>Адрес производства</li>
           </ul>
@@ -37,9 +37,7 @@ const Footer = () => {
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
             <li className={styles.listItem}>Курица</li>
-            <li className={styles.listItem}>Свинина</li>
-            <li className={styles.listItem}>Говядина</li>
-            <li className={styles.listItem}>Индейка</li>
+            <li className={styles.listItem}>Шашлык</li>
           </ul>
         </div>
       </div>

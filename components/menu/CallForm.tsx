@@ -8,8 +8,6 @@ const CallForm = ({ setOpen }) => {
   const [number, setNumber] = useState('')
   const [valid, setValid] = useState(true)
 
-  console.log(valid)
-
   function sendNumber(number: string) {
     if (number == '') {
       setValid(false)

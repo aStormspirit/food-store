@@ -3,7 +3,7 @@ import ProductList from '../components/ProductList'
 import { prisma } from '../prisma/client'
 import { NextPage } from 'next'
 
-const catalog: NextPage<Products> = ({ data }) => {
+const catalog: NextPage<{ data: Products[] }> = ({ data }) => {
   return (
     <div>
       <ProductList productsList={data} />
