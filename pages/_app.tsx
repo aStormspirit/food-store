@@ -5,6 +5,7 @@ import store from '../redux/store'
 import Layout from '../components/Layout'
 import { Provider } from 'react-redux'
 import { NextPage } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -28,6 +29,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
           <Component {...pageProps} />
         </Layout>
       </Provider>
+      <Analytics />
     </>
   )
 }
