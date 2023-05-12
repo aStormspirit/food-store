@@ -110,15 +110,15 @@
   }
 
   .price::before {
-    content: 'Price: ';
+    content: 'Цена: ';
     font-weight: 500;
   }
   .quantity::before {
-    content: 'Quantity: ';
+    content: 'Количество: ';
     font-weight: 500;
   }
   .total::before {
-    content: 'Total: ';
+    content: 'Итого: ';
     font-weight: 500;
   }
 

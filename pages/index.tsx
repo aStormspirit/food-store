@@ -29,6 +29,7 @@ const Home = () => {
       <section className={styles.promo}>
         <div className={styles.promoWrapper}>
           <div className={styles.promo__card}>
+            <div></div>
             <h2 className={styles.promo__title}>Доставка</h2>
             <p className={styles.promo__content}>
               Cобственный автопарк и фирменные контейнеры, способные производить

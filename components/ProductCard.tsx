@@ -11,8 +11,8 @@ const ProductCard: NextPage<{ product: Product }> = ({ product }) => {
         <Image
           src={product.image}
           alt="product"
-          width={300}
-          height={300}
+          width={173}
+          height={149}
           loading="lazy"
         />
       </Link>

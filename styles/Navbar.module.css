@@ -43,7 +43,7 @@
 }
 
 .text:last-child {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.75rem + 0.5vw);
   font-weight: bold;
 }
 

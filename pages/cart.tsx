@@ -23,7 +23,7 @@ const Cart = () => {
               <th>Колличество</th>
               <th>Итого</th>
             </tr>
-            {cart.products.map((product) => (
+            {cart.products.map((product: any) => (
               <tr className={styles.tr} key={product.id}>
                 <td>
                   <div className={styles.imgContainer}>
@@ -34,7 +34,7 @@ const Cart = () => {
                   <span className={styles.name}>{product.name}</span>
                 </td>
                 <td>
-                  <span className={styles.price}>&#8381;{product.prices}</span>
+                  <span className={styles.price}>&#8381;0</span>
                 </td>
                 <td>
                   <span className={styles.quantity}>{product.quantity}</span>

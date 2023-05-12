@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "/img/vacuum-400.webp",
+    "name": "Куриные крылышки",
+    "price": 225,
+    "short_desc": "Куриные крылышки, в вакумной упаковке"
+  },
+  {
+    "id": 2,
+    "image": "/img/tyshka.jpg",
+    "name": "Тушка курицы",
+    "price": 160,
+    "short_desc": "Куриная тушка, охлажденка"
+  },
+  {
+    "id": 3,
+    "image": "/img/grudka.jpg",
+    "name": "Филе грудки",
+    "price": 247,
+    "short_desc": "Грудка курицы, охлажденка"
+  },
+  {
+    "id": 4,
+    "image": "/img/crilo.jpg",
+    "name": "Крылья куриные",
+    "price": 190,
+    "short_desc": "крыло куриное, охлажденка"
+  }
+]
