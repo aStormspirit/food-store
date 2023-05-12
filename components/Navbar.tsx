@@ -7,7 +7,7 @@ import Burger from './menu/Burger'
 import CallForm from './menu/CallForm'
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState<boolean>(false)
   const quantity = useSelector((state: any) => state.cart.quantity)
 
   return (

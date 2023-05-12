@@ -3,10 +3,11 @@ import styles from '../../styles/CallForm.module.css'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
 import axios from 'axios'
+import { NextPage } from 'next'
 
-const CallForm = ({ setOpen }) => {
-  const [number, setNumber] = useState('')
-  const [valid, setValid] = useState(true)
+const CallForm: NextPage<any> = ({ setOpen }) => {
+  const [number, setNumber] = useState<string>('')
+  const [valid, setValid] = useState<boolean>(true)
 
   function sendNumber(number: string) {
     if (number == '') {

@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
+import TbTruckDelivery from 'react-icons/tb'
+import { SlPeople } from 'react-icons/sl'
 
 const Home = () => {
   return (
@@ -9,44 +11,43 @@ const Home = () => {
         <meta name="description" content="Huberma shop" />
         <link rel="icon" href="/img/logo.jpeg" />
       </Head>
+
       <section className={styles.hero}>
         <div className={styles.hero__slogan}>
           <h1>Бесплатная доставка</h1>
           <p>
-            Заказывая у нас, вы получаете бесплатную доставку до вашего
-            заведения.
+            Предлагает вам нашу широкую линейку мяса с высоким качеством и по
+            доступным ценам. Мы гарантируем вам доставку мяса в кратчайшие
+            сроки!
           </p>
         </div>
         <a href="/catalog" className={styles.btn__promo}>
           <span>Сделать заказ</span>
         </a>
       </section>
-      {/* <ProductList productsList={data} /> */}
-      <section className={styles.container}>
-        <div className={styles.bot}>
-          <div></div>
-          <div></div>
-          <div></div>
+
+      <section className={styles.promo}>
+        <div className={styles.promoWrapper}>
+          <div className={styles.promo__card}>
+            <h2 className={styles.promo__title}>Доставка</h2>
+            <p className={styles.promo__content}>
+              Cобственный автопарк и фирменные контейнеры, способные производить
+              безопасную транспортировку и на продолжительное время сохранять
+              свежесть продукции.
+            </p>
+          </div>
+          <div className={styles.promo__card}>
+            <div>
+              <SlPeople />
+            </div>
+            <h2 className={styles.promo__title}>Индивидуальный подход</h2>
+            <p className={styles.promo__content}>
+              К каждому клиенту, начиная от розничного потребителя, заканчивая
+              оптовым покупателем.
+            </p>
+          </div>
         </div>
       </section>
-      {/* <section className={styles.infoWrapper}>
-        <div className={styles.info}>
-          <h2 className={styles.infoTitle}>
-            <b>с заботой</b> о наших клиентах
-          </h2>
-          <p>
-            {' '}
-            Мы поставляем мясо в гипермаркеты, рестораны и лично в руки всем,
-            кто любит качественный и свежий продукт.
-          </p>
-          <p>
-            Каждая партия товара проходит ветеринарную экспертизу, на все
-            упаковки наносится дата производства, срок годности. Мы не мясники и
-            не магазин – мы поставщики. Доставляем в первозданном виде прямо с
-            производства. Мы за вкусное мясо у вас дома!{' '}
-          </p>
-        </div>
-      </section> */}
     </div>
   )
 }

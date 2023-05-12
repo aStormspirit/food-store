@@ -7,9 +7,9 @@ import axios from 'axios'
 import { NextPage } from 'next'
 
 const OrderDetail: NextPage<any> = ({ cart, total, setCash }) => {
-  const [customer, setCustomer] = useState('')
-  const [number, setNumber] = useState('')
-  const [address, setAddress] = useState('')
+  const [customer, setCustomer] = useState<any>('')
+  const [number, setNumber] = useState<any>('')
+  const [address, setAddress] = useState<any>('')
   const dispatch = useDispatch()
 
   let orders_name = cart.products.map((product) => product.name).join(',')

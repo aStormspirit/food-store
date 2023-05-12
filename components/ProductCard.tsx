@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { NextPage } from 'next'
 
 const ProductCard: NextPage<{ product: Product }> = ({ product }) => {
-  // const [width, height] = useDeviceSize()
-
   return (
     <div className={styles.container}>
       <Link href={`/product/${product.id}`}>

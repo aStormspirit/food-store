@@ -3,7 +3,6 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  margin-top: -20px;
   color: white;
   text-align: center;
   display: flex;
@@ -11,11 +10,11 @@
   align-items: center;
   flex-direction: column;
   height: 620px;
-}
 
-.hero__slogan {
-  width: 60%;
-  background-color: rgba(0, 0, 0, 0.5);
+  &__slogan {
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .title {
@@ -57,7 +56,7 @@
 }
 
 .btn__promo {
-  margin-top: 40px;
+  margin-top: 3%;
   font-weight: 700;
   z-index: 2;
   background-color: rgb(83, 121, 57);
@@ -68,9 +67,36 @@
   border-radius: 5px;
 }
 
+.promo {
+  margin-left: 60px;
+  margin-right: 60px;
+
+  &__card {
+  }
+
+  &__title {
+    color: #363d42;
+    font-family: 'Poppins', Sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  &__text {
+    text-align: center;
+    color: #616262;
+    font-family: 'Poppins', Sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.promoWrapper {
+  display: grid;
+}
+
 @media screen and (max-width: 560px) {
   .hero {
-    background-image: url('../public/img/meat-560.webp') !important;
+    background-image: url('../public/img/meat-560.webp');
     height: 320px;
   }
 
