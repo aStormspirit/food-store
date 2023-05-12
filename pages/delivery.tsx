@@ -3,7 +3,7 @@ import styles from '../styles/Delivery.module.css'
 import { BsFillCreditCard2BackFill } from 'react-icons/bs'
 import { GiWallet } from 'react-icons/gi'
 
-const delivery = () => {
+const Delivery = () => {
   return (
     <section className={styles.container}>
       <h1 className={styles.text}>ДОСТАВКА И ОПЛАТА</h1>
@@ -62,4 +62,4 @@ const delivery = () => {
   )
 }
 
-export default delivery
+export default Delivery

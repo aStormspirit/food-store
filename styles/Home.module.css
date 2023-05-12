@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('../public/img/freshchicken-480.jpg');
+  background-image: url('../public/img/meat-1860.webp');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
@@ -10,9 +10,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 620px;
 }
 
 .hero__slogan {
+  width: 60%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -55,23 +57,25 @@
 }
 
 .btn__promo {
+  margin-top: 40px;
   font-weight: 700;
   z-index: 2;
-  padding: 20px;
   background-color: rgb(83, 121, 57);
-  grid-column: 6/8;
-  grid-row: 8;
   grid-row: 8;
   text-align: center;
-  padding: 0;
   font-size: calc(0.75rem + 1vw);
   padding: 10px;
-  box-shadow: 0 10px 30px rgba(#414856, 0.1);
   border-radius: 5px;
 }
 
 @media screen and (max-width: 560px) {
   .hero {
-    min-height: 320px;
+    background-image: url('../public/img/meat-560.webp') !important;
+    height: 320px;
+  }
+
+  .btn__promo {
+    font-size: calc(1rem + 1vw);
+    padding: 18px;
   }
 }

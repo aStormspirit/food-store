@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { NextPage } from 'next'
 
-const Home: NextPage<any> = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>

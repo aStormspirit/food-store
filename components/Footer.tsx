@@ -20,18 +20,23 @@ const Footer = () => {
       <div className={styles.item}>
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
-            <li className={styles.listItem}>Каталог</li>
-            <li className={styles.listItem}>Доставке</li>
-            <li className={styles.listItem}>Акции</li>
-            <li className={styles.listItem}>Адрес производства</li>
+            <Link href={'/catalog'} className={styles.link}>
+              <li className={styles.listItem}>Каталог</li>
+            </Link>
+            <Link href={'/delivery'} className={styles.link}>
+              <li className={styles.listItem}>Доставка</li>
+            </Link>
+            <Link href={'/contacts'} className={styles.link}>
+              <li className={styles.listItem}>Контакты</li>
+            </Link>
           </ul>
         </div>
         <div className={styles.listWrapper}>
           <ul className={styles.list}>
             <li className={styles.listItem}>О компании</li>
             <li className={styles.listItem}>Франшиза</li>
-            <li className={styles.listItem}>Аренда помещений</li>
             <li className={styles.listItem}>Новым поставщикам</li>
+            <li className={styles.listItem}>Политика конфиденциальности</li>
           </ul>
         </div>
         <div className={styles.listWrapper}>

@@ -34,8 +34,8 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   )
 }
 
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
-}
+// export function reportWebVitals(metric: NextWebVitalsMetric) {
+//   console.log(metric)
+// }
 
 export default App

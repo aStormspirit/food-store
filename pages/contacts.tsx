@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/Contacts.module.css'
 
-const contacts = () => {
+const Contacts = () => {
   return (
     <section className={styles.container}>
       <div className={styles.form}>
@@ -71,4 +71,4 @@ const contacts = () => {
   )
 }
 
-export default contacts
+export default Contacts
