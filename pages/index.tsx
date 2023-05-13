@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import TbTruckDelivery from 'react-icons/tb'
+import { FaTruck } from 'react-icons/fa'
 import { SlPeople } from 'react-icons/sl'
 
 const Home = () => {
@@ -29,20 +29,22 @@ const Home = () => {
       <section className={styles.promo}>
         <div className={styles.promoWrapper}>
           <div className={styles.promo__card}>
-            <div></div>
+            <div className={styles.promo__svg}>
+              <FaTruck />
+            </div>
             <h2 className={styles.promo__title}>Доставка</h2>
-            <p className={styles.promo__content}>
+            <p className={styles.promo__text}>
               Cобственный автопарк и фирменные контейнеры, способные производить
               безопасную транспортировку и на продолжительное время сохранять
               свежесть продукции.
             </p>
           </div>
           <div className={styles.promo__card}>
-            <div>
+            <div className={styles.promo__svg}>
               <SlPeople />
             </div>
             <h2 className={styles.promo__title}>Индивидуальный подход</h2>
-            <p className={styles.promo__content}>
+            <p className={styles.promo__text}>
               К каждому клиенту, начиная от розничного потребителя, заканчивая
               оптовым покупателем.
             </p>
