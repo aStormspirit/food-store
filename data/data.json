@@ -2,29 +2,78 @@
   {
     "id": 1,
     "image": "/img/vacuum-400.webp",
-    "name": "Куриные крылышки",
+    "name": "Куриные крылышки BBQ",
     "price": 225,
     "short_desc": "Куриные крылышки, в вакумной упаковке"
   },
   {
     "id": 2,
-    "image": "/img/tyshka.jpg",
+    "image": "/img/tyshka-400.webp",
     "name": "Тушка курицы",
-    "price": 160,
+    "price": 170,
     "short_desc": "Куриная тушка, охлажденка"
   },
   {
     "id": 3,
-    "image": "/img/grudka.jpg",
+    "image": "/img/grudka-350.webp",
     "name": "Филе грудки",
     "price": 247,
-    "short_desc": "Грудка курицы, охлажденка"
+    "short_desc": "Филе грудки курицы с кожей, охлажденка"
   },
   {
     "id": 4,
-    "image": "/img/crilo.jpg",
+    "image": "/img/grudka2-400.webp",
+    "name": "Филе грудки (без кожи)",
+    "price": 280,
+    "short_desc": "Филе грудка курицы без кожи, охлажденка"
+  },
+  {
+    "id": 5,
+    "image": "/img/grudka.jpg",
+    "name": "Филе окорока",
+    "price": 256,
+    "short_desc": "Филе окорока с кожей, охлажденка"
+  },
+  {
+    "id": 6,
+    "image": "/img/grudka.jpg",
+    "name": "Филе окорока (без кожи)",
+    "price": 256,
+    "short_desc": "Филе окорока без кожи, охлажденка"
+  },
+  {
+    "id": 7,
+    "image": "/img/crilo-400.webp",
     "name": "Крылья куриные",
-    "price": 190,
+    "price": 174,
     "short_desc": "крыло куриное, охлажденка"
+  },
+  {
+    "id": 8,
+    "image": "/img/crilo.jpg",
+    "name": "Филе бедра",
+    "price": 305,
+    "short_desc": "филе куриное (бедро), охлажденка"
+  },
+  {
+    "id": 9,
+    "image": "/img/golen-400.webp",
+    "name": "Голень куриная",
+    "price": 165,
+    "short_desc": "Голень куриная, охлажденка"
+  },
+  {
+    "id": 10,
+    "image": "/img/vedro-400.webp",
+    "name": "Шашлык куриное крыло",
+    "price": 170,
+    "short_desc": "Шашлык из куриного крыла с маринадом, в пластиковом ведре"
+  },
+  {
+    "id": 11,
+    "image": "/img/vedro-400.webp",
+    "name": "Шашлык голень куриная",
+    "price": 160,
+    "short_desc": "Шашлык из куриной голени с маринадом, в пластиковом ведре"
   }
 ]

@@ -12,7 +12,7 @@ const catalog: NextPage<any> = () => {
 }
 
 // export const getServerSideProps = async ({ req }) => {
-//   const data = data
+//   const data = products
 //   return { props: { data } }
 // }
 

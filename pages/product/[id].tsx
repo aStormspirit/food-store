@@ -5,34 +5,34 @@ import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 import { prisma } from '../../prisma/client'
 import { NextPage } from 'next'
+import prod from '../../data/data.json'
 
 const Product: NextPage<{ product: Product }> = ({ product }) => {
-  console.log(product)
-  let newprice = Number(product.price)
+  let newprice = Number(product[0].price)
   const [quantity, setQuantity] = useState(1)
   const [prices, setPrices] = useState(newprice)
   const dispatch = useDispatch()
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product, prices, quantity }))
+    dispatch(addProduct({ ...product[0], prices, quantity }))
   }
 
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
-          <Image src={product.image} fill alt="image" />
+          <Image src={product[0].image} fill alt="image" />
         </div>
       </div>
       <div className={styles.right}>
-        <h1 className={styles.title}>{product.name}</h1>
+        <h1 className={styles.title}>{product[0].name}</h1>
         <span className={styles.price}>&#8381;{prices}</span>
-        <p className={styles.desc}>{product.short_desc}</p>
+        <p className={styles.desc}>{product[0].short_desc}</p>
         <h3 className={styles.choose}>Выберите способ доставки</h3>
         <div className={styles.ingredients}>
           <div className={styles.option}>
             <input
-              type="checkbox"
+              type="radio"
               id="double"
               name="double"
               className={styles.checkbox}
@@ -41,9 +41,9 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
           </div>
           <div className={styles.option}>
             <input
-              type="checkbox"
+              type="radio"
               id="grile"
-              name="grile"
+              name="double"
               className={styles.checkbox}
             />
             <label htmlFor="grile">Самовывоз</label>
@@ -69,11 +69,12 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
 export default Product
 
 export const getServerSideProps = async ({ params }) => {
-  const data = await prisma.product.findUnique({
-    where: {
-      id: Number(params.id),
-    },
-  })
+  const data = prod.filter((el) => el.id == params.id)
+  // const data = await prisma.product.findUnique({
+  //   where: {
+  //     id: Number(params.id),
+  //   },
+  // })
 
   return {
     props: {
