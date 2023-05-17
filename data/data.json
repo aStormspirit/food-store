@@ -29,14 +29,14 @@
   },
   {
     "id": 5,
-    "image": "/img/grudka.jpg",
+    "image": "/img/okorokS-400.webp",
     "name": "Филе окорока",
     "price": 256,
     "short_desc": "Филе окорока с кожей, охлажденка"
   },
   {
     "id": 6,
-    "image": "/img/grudka.jpg",
+    "image": "/img/okorok.webp",
     "name": "Филе окорока (без кожи)",
     "price": 256,
     "short_desc": "Филе окорока без кожи, охлажденка"
@@ -50,7 +50,7 @@
   },
   {
     "id": 8,
-    "image": "/img/crilo.jpg",
+    "image": "/img/bedro.webp",
     "name": "Филе бедра",
     "price": 305,
     "short_desc": "филе куриное (бедро), охлажденка"

@@ -1,13 +1,12 @@
 .container {
   border: 1px solid black;
   background-color: white;
-  /* width: 22%;
-  padding: 10px; */
+  max-width: 230px;
+  min-height: 290px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 20px 40px; */
   cursor: pointer;
   border-radius: 20px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -40,7 +39,6 @@
 
 @media screen and (max-width: 560px) {
   .container {
-    width: 100%;
     margin: 0px 60px 10px 60px;
   }
 
