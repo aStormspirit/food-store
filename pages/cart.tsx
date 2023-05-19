@@ -34,7 +34,7 @@ const Cart = () => {
                   <span className={styles.name}>{product.name}</span>
                 </td>
                 <td>
-                  <span className={styles.price}>&#8381;0</span>
+                  <span className={styles.price}>&#8381;{product.price}</span>
                 </td>
                 <td>
                   <span className={styles.quantity}>{product.quantity}</span>
