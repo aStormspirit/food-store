@@ -135,10 +135,55 @@
 
     &__card {
       padding: 10%;
+      position: absolute;
+      width: 500px;
+      height: 300px;
+      top: 0;
     }
   }
 
   .promoWrapper {
+    width: 500px;
+    height: 300px;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #slide1 {
+    left: 0;
+  }
+
+  #slide2 {
+    left: 100%;
+  }
+
+  #slide3 {
+    left: 200%;
+  }
+
+  @keyframes slide {
+    from {
+      top: 0;
+      left: 0;
+    }
+    12.5% {
+      transform: translate(0px, 0px);
+    }
+    25% {
+      transform: translate(-500px, 0);
+    }
+    36% {
+      transform: translate(-500px, 300px);
+    }
+    37% {
+      transform: translate(500px, 300px);
+    }
+    87.5% {
+      transform: translate(500px, 0);
+    }
+    to {
+      transform: (0px, 0px);
+    }
   }
 }

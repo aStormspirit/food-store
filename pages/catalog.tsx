@@ -3,7 +3,7 @@ import ProductList from '../components/ProductList'
 import { NextPage } from 'next'
 import data from '../data/data.json'
 
-const catalog: NextPage<any> = () => {
+const Catalog: NextPage<any> = () => {
   return (
     <div>
       <ProductList productsList={data} />
@@ -16,4 +16,4 @@ const catalog: NextPage<any> = () => {
 //   return { props: { data } }
 // }
 
-export default catalog
+export default Catalog

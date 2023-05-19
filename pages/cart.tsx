@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../styles/Cart.module.css'
+import styles from '../styles/Cart.module.scss'
 import Image from 'next/image'
 
 import { useSelector } from 'react-redux'

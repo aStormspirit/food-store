@@ -47,7 +47,7 @@ const Home = () => {
 
       <section className={styles.promo}>
         <div className={styles.promoWrapper}>
-          <div className={styles.promo__card}>
+          <div className={styles.promo__card} id={styles.slide1}>
             <div className={styles.promo__svg}>
               <FaWarehouse />
             </div>
@@ -58,7 +58,8 @@ const Home = () => {
               хранения мяса.
             </p>
           </div>
-          <div className={styles.promo__card}>
+
+          <div className={styles.promo__card} id={styles.slide2}>
             <div className={styles.promo__svg}>
               <FaTruck />
             </div>
@@ -69,7 +70,8 @@ const Home = () => {
               свежесть продукции.
             </p>
           </div>
-          <div className={styles.promo__card}>
+
+          <div className={styles.promo__card} id={styles.slide3}>
             <div className={styles.promo__svg}>
               <SlPeople />
             </div>
