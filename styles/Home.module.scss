@@ -139,11 +139,14 @@
       width: 500px;
       height: 300px;
       top: 0;
+      animation-name: slide;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
   }
 
   .promoWrapper {
-    width: 500px;
     height: 300px;
     flex-direction: column;
     position: relative;
@@ -152,14 +155,17 @@
 
   #slide1 {
     left: 0;
+    animation-delay: 0s;
   }
 
   #slide2 {
     left: 100%;
+    animation-delay: 3s;
   }
 
   #slide3 {
     left: 200%;
+    animation-delay: 6s;
   }
 
   @keyframes slide {
@@ -168,7 +174,7 @@
       left: 0;
     }
     12.5% {
-      transform: translate(0px, 0px);
+      transform: translate(0px, 0);
     }
     25% {
       transform: translate(-500px, 0);

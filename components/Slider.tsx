@@ -1,79 +1,51 @@
-import React, { useState } from 'react'
-import styles from '../styles/Featured.module.css'
-import Image from 'next/image'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import React from 'react'
+import { FaTruck, FaWarehouse } from 'react-icons/fa'
+import { SlPeople } from 'react-icons/sl'
+import styles from '../styles/Home.module.scss'
 
 const Slider = () => {
-  const [index, setIndex] = useState(0)
-
-  const images = [
-    {
-      path: '/img/slider-1.jpeg',
-      text: 'Бесплатная доставка',
-      html: (
-        <a href="" className={styles.btn__promo}>
-          <span>Сделать заказ</span>
-        </a>
-      ),
-    },
-    {
-      path: '/img/slider-2.jpeg',
-      text: 'Свежее мясо',
-      html: (
-        <a href="" className={styles.btn__promo}>
-          <span>Сделать заказ</span>
-        </a>
-      ),
-    },
-    {
-      path: '/img/slider-3.jpeg',
-      text: 'Индивидуальный подход',
-      html: (
-        <a href="" className={styles.btn__promo}>
-          <span>Сделать заказ</span>
-        </a>
-      ),
-    },
-  ]
-
-  const handleArrow = (direction: any) => {
-    if (direction === 'l') {
-      setIndex(index !== 0 ? index - 1 : 2)
-    }
-    if (direction === 'r') {
-      setIndex(index !== 2 ? index + 1 : 0)
-    }
-  }
   return (
-    <section className={styles.container}>
-      <div
-        className={styles.arrowContainer}
-        style={{ left: 0 }}
-        onClick={() => handleArrow('l')}
-      >
-        <div className={styles.arrowWrapper}>
-          <FaAngleLeft />
-        </div>
-      </div>
-      <div
-        className={styles.wrapper}
-        style={{ transform: `translateX(${-100 * index}vw)` }}
-      >
-        {images.map((img, i) => (
-          <div className={styles.imgContainer} key={i}>
-            <h1 className={styles.sliderText}>{img.text}</h1>
-            <Image src={img.path} fill key={i} alt="featured" />
-            {img.html}
+    <section className={styles.promo}>
+      <div className={styles.promoWrapper}>
+        <div className={styles.promo__card} id={styles.slide1}>
+          <div>
+            <div className={styles.promo__svg}>
+              <FaWarehouse />
+            </div>
+            <h2 className={styles.promo__title}>Хранение</h2>
+            <p className={styles.promo__text}>
+              2,4 га специально оборудованных складских помещений. Холодильные
+              камеры имеют оптимальную температуру и влажность, идеальную для
+              хранения мяса.
+            </p>
           </div>
-        ))}
-      </div>
-      <div
-        className={styles.arrowContainer}
-        style={{ right: 0 }}
-        onClick={() => handleArrow('r')}
-      >
-        <div className={styles.arrowWrapper}>
-          <FaAngleRight />
+        </div>
+
+        <div className={styles.promo__card} id={styles.slide2}>
+          <div>
+            <div className={styles.promo__svg}>
+              <FaTruck />
+            </div>
+            <h2 className={styles.promo__title}>Доставка</h2>
+            <p className={styles.promo__text}>
+              Cобственный автопарк и фирменные контейнеры, способные производить
+              безопасную транспортировку и на продолжительное время сохранять
+              свежесть продукции.
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.promo__card} id={styles.slide3}>
+          <div>
+            <div className={styles.promo__svg}>
+              <SlPeople />
+            </div>
+            <h2 className={styles.promo__title}>Индивидуальный подход</h2>
+            <p className={styles.promo__text}>
+              К каждому клиенту, начиная от розничного потребителя, заканчивая
+              оптовым покупателем.
+            </p>
+          </div>
         </div>
       </div>
     </section>
