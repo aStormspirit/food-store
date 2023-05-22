@@ -136,12 +136,12 @@
     &__card {
       padding: 10%;
       position: absolute;
-      width: 500px;
+      width: 100vw;
       height: 300px;
       top: 0;
       animation-name: slide;
       animation-duration: 10s;
-      animation-timing-function: linear;
+      animation-timing-function: cubic-bezier(0.95, 0.05, 0.8, 0.04);
       animation-iteration-count: infinite;
     }
   }
@@ -154,7 +154,6 @@
   }
 
   #slide1 {
-    left: 0;
     animation-delay: 0s;
   }
 
@@ -171,22 +170,22 @@
   @keyframes slide {
     from {
       top: 0;
-      left: 0;
+      left: 0vw;
     }
     12.5% {
       transform: translate(0px, 0);
     }
     25% {
-      transform: translate(-500px, 0);
+      transform: translate(-150%, 0);
     }
     36% {
-      transform: translate(-500px, 300px);
+      transform: translate(-150%, 300px);
     }
     37% {
-      transform: translate(500px, 300px);
+      transform: translate(100%, 300px);
     }
     87.5% {
-      transform: translate(500px, 0);
+      transform: translate(100%, 0);
     }
     to {
       transform: (0px, 0px);
