@@ -38,48 +38,6 @@
   border-radius: 5px;
 }
 
-.promo {
-  margin-top: 40px;
-  margin-left: 60px;
-  margin-right: 60px;
-  background-color: gainsboro;
-
-  &__svg {
-    justify-content: center;
-    display: flex;
-  }
-
-  &__svg > svg {
-    margin-bottom: 5%;
-    scale: 5;
-  }
-
-  &__card {
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 10%;
-  }
-
-  &__title {
-    text-align: center;
-    color: #363d42;
-    font-family: 'Poppins', Sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 0px;
-  }
-
-  &__text {
-    margin-top: 0px;
-    text-align: center;
-    color: #616262;
-    font-family: 'Poppins', Sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-  }
-}
-
 .info {
   background-color: gainsboro;
   padding: 10px 60px 10px 60px;
@@ -113,7 +71,7 @@
 @media screen and (max-width: 560px) {
   .hero {
     background-image: url('../public/img/meat-560.webp');
-    height: 320px;
+    height: 30vh;
 
     &__slogan {
       width: 60%;
@@ -127,68 +85,5 @@
   .btn__promo {
     font-size: calc(1rem + 1vw);
     padding: 18px;
-  }
-
-  .promo {
-    margin-left: 0px;
-    margin-right: 0px;
-
-    &__card {
-      padding: 10%;
-      position: absolute;
-      width: 100vw;
-      height: 300px;
-      top: 0;
-      animation-name: slide;
-      animation-duration: 10s;
-      animation-timing-function: cubic-bezier(0.95, 0.05, 0.8, 0.04);
-      animation-iteration-count: infinite;
-    }
-  }
-
-  .promoWrapper {
-    height: 300px;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #slide1 {
-    animation-delay: 0s;
-  }
-
-  #slide2 {
-    left: 100%;
-    animation-delay: 3s;
-  }
-
-  #slide3 {
-    left: 200%;
-    animation-delay: 6s;
-  }
-
-  @keyframes slide {
-    from {
-      top: 0;
-      left: 0vw;
-    }
-    12.5% {
-      transform: translate(0px, 0);
-    }
-    25% {
-      transform: translate(-150%, 0);
-    }
-    36% {
-      transform: translate(-150%, 300px);
-    }
-    37% {
-      transform: translate(100%, 300px);
-    }
-    87.5% {
-      transform: translate(100%, 0);
-    }
-    to {
-      transform: (0px, 0px);
-    }
   }
 }

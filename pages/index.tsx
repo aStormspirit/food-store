@@ -25,6 +25,8 @@ const Home = () => {
         </a>
       </section>
       <Slider />
+
+      <section></section>
     </div>
   )
 }

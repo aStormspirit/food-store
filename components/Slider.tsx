@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaTruck, FaWarehouse } from 'react-icons/fa'
 import { SlPeople } from 'react-icons/sl'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Slider.module.scss'
 
 const Slider = () => {
   return (
