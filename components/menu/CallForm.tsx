@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from '../../styles/CallForm.module.css'
+import styles from '../../styles/CallForm.module.scss'
 import { AiOutlineClose } from 'react-icons/ai'
 import Link from 'next/link'
 import axios from 'axios'
@@ -9,8 +9,15 @@ const CallForm: NextPage<any> = ({ setOpen }) => {
   const [number, setNumber] = useState<string>('')
   const [valid, setValid] = useState<boolean>(true)
 
+  setTimeout(() => {
+    setValid(true)
+  }, 4000)
+
   function sendNumber(number: string) {
-    if (number == '') {
+    if (
+      number == '' ||
+      number.match(/^((8|\+7)[\- ]?)?(\?\d{3}\?[\- ]?)?[\d\- ]{7,10}$/)
+    ) {
       setValid(false)
       return false
     }
