@@ -6,14 +6,10 @@ import data from '../data/data.json'
 const Catalog: NextPage<any> = () => {
   return (
     <div>
+      <h1>Каталог</h1>
       <ProductList productsList={data} />
     </div>
   )
 }
-
-// export const getServerSideProps = async ({ req }) => {
-//   const data = products
-//   return { props: { data } }
-// }
 
 export default Catalog

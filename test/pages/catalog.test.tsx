@@ -1,9 +1,8 @@
-import React from 'react'
 import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import React from 'react'
 import Catalog from '../../pages'
 
-describe('Index page', () => {
+describe('render - Catalog page should render', () => {
   it('Should render properly', () => {
     render(<Catalog />)
   })

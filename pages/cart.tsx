@@ -41,7 +41,7 @@ const Cart = () => {
                 </td>
                 <td>
                   <span className={styles.total}>
-                    &#8381;{product.prices * product.quantity}
+                    &#8381;{product.price * product.quantity}
                   </span>
                 </td>
               </tr>

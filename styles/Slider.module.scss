@@ -40,6 +40,10 @@
   }
 }
 
+.promoWrapper {
+  display: flex;
+}
+
 @media screen and (max-width: 560px) {
   .promo {
     margin-left: 0px;

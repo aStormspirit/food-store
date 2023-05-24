@@ -2,19 +2,33 @@ import React, { useState } from 'react'
 import styles from '../../styles/Product.module.css'
 import Image from 'next/image'
 import { useDispatch } from 'react-redux'
-import { addProduct } from '../../redux/cartSlice'
-import { prisma } from '../../prisma/client'
+import { addProduct, addQuantity } from '../../redux/cartSlice'
 import { NextPage } from 'next'
 import prod from '../../data/data.json'
+import { useSelector } from 'react-redux'
 
 const Product: NextPage<{ product: Product }> = ({ product }) => {
-  let newprice = Number(product[0].price)
-  const [quantity, setQuantity] = useState(1)
-  const [prices, setPrices] = useState(newprice)
+  const [quantity, setQuantity] = useState<number>(1)
+  const cart = useSelector((state: any) => state.cart)
   const dispatch = useDispatch()
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product[0], prices, quantity }))
+    if (cart.products.length == 0) {
+      dispatch(addProduct({ ...product[0], quantity }))
+    } else {
+      let id = cart.products.map((el) => el.id)
+      if (id.includes(product[0].id)) {
+        let newCart = cart.products.filter((e) => e.id != product[0].id)
+        let item = cart.products.filter((e) => e.id == product[0].id)
+        let lastQu = item[0].quantity
+        let newItem = product[0]
+        newItem.quantity = lastQu + quantity
+        newCart.push(newItem)
+        dispatch(addQuantity({ ...product[0], quantity, newCart }))
+      } else {
+        dispatch(addProduct({ ...product[0], quantity }))
+      }
+    }
   }
 
   return (
@@ -26,7 +40,7 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{product[0].name}</h1>
-        <span className={styles.price}>&#8381;{prices}</span>
+        <span className={styles.price}>&#8381;{product[0].price}</span>
         <p className={styles.desc}>{product[0].short_desc}</p>
         <h3 className={styles.choose}>Выберите способ доставки</h3>
         <div className={styles.ingredients}>
@@ -52,7 +66,7 @@ const Product: NextPage<{ product: Product }> = ({ product }) => {
         <div className={styles.add}>
           <p>Колличество/Вес Кг.:</p>
           <input
-            onChange={(e: any) => setQuantity(e.target.value)}
+            onChange={(e: any) => setQuantity(Number(e.target.value))}
             type="number"
             defaultValue={1}
             className={styles.quantity}

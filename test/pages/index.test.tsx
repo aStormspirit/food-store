@@ -8,9 +8,9 @@ describe('Index page', () => {
     render(<Home />)
 
     const header = screen.getByRole('heading', {
-      name: /Экологически чистое мясо курицы!/i,
+      name: /Бесплатная доставка/i,
     })
-    const headerText = 'Экологически чистое мясо курицы!'
+    const headerText = 'Бесплатная доставка'
 
     expect(header).toHaveTextContent(headerText)
   })
