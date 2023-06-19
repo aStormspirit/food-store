@@ -25,8 +25,8 @@ const Navbar = () => {
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>Заказать</div>
-          <a type="tel" href="tel:+79516835376" className={styles.text}>
-            {'+7(951)683-53-76'}
+          <a type="tel" href="tel:+79110011607" className={styles.text}>
+            {'+7(911)001-16-07'}
           </a>
         </div>
       </div>
